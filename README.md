@@ -1,4 +1,3 @@
-
 # Chatfuel Hearken Questions
 A JSON endpoint that takes input from [ChatFuel](https://chatfuel.com/) and sends it to [Hearken](https://www.wearehearken.com/).
 
