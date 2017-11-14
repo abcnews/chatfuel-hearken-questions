@@ -26,8 +26,10 @@ function handlePOST(req, res) {
   // Set the Hearken endpoint. This is exposed through the Hearken embeds
   // https://modules.wearehearken.com/abc/embed/361/share
   const hearkenUrl =
-  "https://modules.wearehearken.com/" + encodeURIComponent(hearkenName) + "/api/questions.js";
-  
+    "https://modules.wearehearken.com/" +
+    encodeURIComponent(hearkenName) +
+    "/api/questions.js";
+
   // Hearken accepts a Full Name field
   const fullName = firstName + " " + lastName;
 
