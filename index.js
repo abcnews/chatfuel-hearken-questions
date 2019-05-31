@@ -92,17 +92,10 @@ function handlePOST(req, res) {
         redirect_to_blocks: ["Hearken error"]
       });
     });
-
-  // Just testing
-  // res.status(200).json({
-  //   messages: [{ text: hearkenUrl }]
-  // });
 }
 
 function handleGET(req, res) {
   // Do something with the GET request
-  // var input = req.query.input;
-
   res.status(200).json({
     messages: [
       {
@@ -121,16 +114,6 @@ function handlePUT(req, res) {
       "This is a PUT request. Please use POST if you want to actually do somethign..."
     );
 }
-
-/**
- * Responds to a GET request with "Hello World!". Forbids a PUT request.
- *
- * @example
- * gcloud alpha functions call hearken
- *
- * @param {Object} req Cloud Function request context.
- * @param {Object} res Cloud Function response context.
- */
 
 // Handle the request and send to appropriate function
 exports.hearken = (req, res) => {
