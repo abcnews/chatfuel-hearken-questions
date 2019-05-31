@@ -9,7 +9,7 @@
   "author": "Joshua Byrd <phocks@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.17.0",
+    "axios": "^0.19.0",
     "isemail": "^3.0.0",
     "serverless-google-cloudfunctions": "^1.1.0"
   }
