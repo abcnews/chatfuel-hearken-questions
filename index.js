@@ -35,20 +35,22 @@ function handlePOST(req, res) {
 
   // Find out if they want to remain anon or not
   // TODO: Do some actual language processing here perhaps?
+  // NOTE: We reversed the truthyness of this due to language in chatfuel
+  // eg. Do you want to share your answers? instead of "Remain anonymous".
   if (
     preferAnonymous.toLowerCase().includes("no") ||
     preferAnonymous.toLowerCase().includes("nup") ||
     preferAnonymous.toLowerCase().includes("negative") ||
     preferAnonymous.toLowerCase().includes("false")
   ) {
-    isAnon = false;
-  } else {
     isAnon = true;
+  } else {
+    isAnon = false;
   }
 
   // Did they not want to provide an email address?
   if (!isemail.validate(email)) {
-    email = "";
+    email = "noemail@noemail.com";
   }
 
   // Create our payload onject that we will send to Hearken
@@ -114,6 +116,14 @@ function handlePUT(req, res) {
       "This is a PUT request. Please use POST if you want to actually do somethign..."
     );
 }
+
+/**
+ * @example
+ * gcloud alpha functions call hearken
+ *
+ * @param {Object} req Cloud Function request context.
+ * @param {Object} res Cloud Function response context.
+ */
 
 // Handle the request and send to appropriate function
 exports.hearken = (req, res) => {
