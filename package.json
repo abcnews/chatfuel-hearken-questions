@@ -14,7 +14,7 @@
     "extend": ">=3.0.2",
     "hoek": ">=4.2.1",
     "isemail": "^3.0.0",
-    "lodash": ">=4.17.13",
+    "lodash": ">=4.17.19",
     "serverless-google-cloudfunctions": "^2.3.2",
     "sshpk": ">=1.13.2"
   }
